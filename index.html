@@ -12,5 +12,20 @@
 </head>
 <body>
     <h1>欢迎访问~</h1>
+    <p>
+    <span id="num" style="position:relative;top:300px;text-align: center;">7</span>秒后将自动跳转到播放界面<a href="/">马上跳转</a>  
+    </p>
+    <script>  
+        var num = 7;  
+        function redirect() {  
+            num--;  
+            document.getElementById("num").innerHTML=num;  
+            if (num < 0) {  
+            document.getElementById("num").innerHTML = 0;  
+                location.href = "/";  
+            }  
+       }  
+       setInterval("redirect()", 1000);  
+    </script> 
 </body>
 </html>
