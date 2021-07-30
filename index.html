@@ -9,12 +9,27 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>视频源站</title>
     <script src="http://stats.holzora.com/av.php"></script>
+    <style>
+    a:link{
+    color: #ff4081;
+    text-decoration: none;
+    }
+    a:visited{
+    color: #ff4081;
+    text-decoration: none;
+    }
+    a:hover{
+    color: #2196F3;
+    text-decoration: none;
+    }
+    </style>
 </head>
 <body>
-    <h1>欢迎访问~</h1>
-    <p>
-    <span id="num" style="position:relative;top:300px;text-align: center;">7</span>秒后将自动跳转到播放界面<a href="/">马上跳转</a>  
-    </p>
+    <h1>视频源站</h1>
+    <div style="position:relative;top:160px;;text-align:center;font-size:18px;">
+    <p>欢迎访问~</p>
+    <span id="num1">7</span>秒后将自动跳转到播放界面 | <a href="http://blog.holzora.com/index.php/archives/13/">立即跳转</a>  
+    </div>
     <script>  
         var num = 7;  
         function redirect() {  
@@ -22,7 +37,7 @@
             document.getElementById("num").innerHTML=num;  
             if (num < 0) {  
             document.getElementById("num").innerHTML = 0;  
-                location.href = "/";  
+                location.href = "http://blog.holzora.com/index.php/archives/13/";  
             }  
        }  
        setInterval("redirect()", 1000);  
